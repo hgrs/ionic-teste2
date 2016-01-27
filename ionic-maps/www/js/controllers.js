@@ -18,8 +18,8 @@ angular.module('app.controllers', [])
             //$scope.buscou = true;
             console.log(response.data);
             $scope.data = response.data.response.venues;
-            
-            $scope.imagem = response.data.response.icon.prefix + response.data.response.icon.suffix; //  junta prefix e sufix da url - cria link da imagem
+            $scope.png = ".png";
+         //   $scope.imagem = response.data.response.venues.icon['prefix'] + response.data.response.venues.icon.suffix; //  junta prefix e sufix da url - cria link da imagem
             
             
             

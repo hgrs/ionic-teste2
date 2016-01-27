@@ -78,9 +78,9 @@
                     </div>
                    
                     <div class="item item-image" ng-repeat="d in data">>
-                        <img src="{{d.imagem}}">
+                        <img ng-init="blargh=d.categories[0].icon.prefix+d.categories[0].icon.suffix" ng-src="{{blargh}}">
                     </div>
-
+<img src="https://irs0.4sqi.net/img/general/100x100/26739064_mUxQ4CGrobFqwpcAIoX6YoAdH0xCDT4YAxaU6y65PPI.jpg">
                     
                     <a class="item item-icon-left balanced" href="#">
                         <i class="icon ion-music-note"></i>
