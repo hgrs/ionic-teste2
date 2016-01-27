@@ -76,29 +76,29 @@
                         <img src="https://igcdn-photos-a-a.akamaihd.net/hphotos-ak-xft1/t51.2885-19/s150x150/12530801_1687655331502720_695480871_a.jpg">
                         <h2>senatoremah</h2>
                     </div>
-
-                    <div class="item item-image">
-                        <img src="http://41.media.tumblr.com/5350babf6677a4d9d808a06d337540a9/tumblr_nbhwly5Unq1ti49qxo1_500.jpg">
+                   
+                    <div class="item item-image" ng-repeat="d in data">>
+                        <img src="{{d.imagem}}">
                     </div>
 
-                    <button class="button button-assertive button-clear  icon-right ion-ios-heart"></button>
-
+                    
                     <a class="item item-icon-left balanced" href="#">
                         <i class="icon ion-music-note"></i>
                         Open in Spotify
                     </a>
+<button class="button button-assertive button-clear  icon-right ion-ios-heart"></button>
 
                 </div>
                <form class="list">
             <div class="spacer" style="width: 300px; height: 323px;"></div>
             <ion-list>
-                <label id="caixa" class="item item-input">
-                     <div ng-repeat="d in data">
-                         <h2>{{d.name}}</h2>
-                    <input type="search"  value="" ng-model="busca2"> 
+               
+                     
+                         
+                   
                     
                     </div> 
-                </label>
+               
             </ion-list>
             <a href="#" id="btnLogar" class="button button-stable button-block item item-icon-left" ng-click="buscaAPI()">Procurar</a>
            
