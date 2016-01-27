@@ -12,12 +12,18 @@ angular.module('app.controllers', [])
         $scope.buscaAPI = function(busca2){
         // Simple GET request example:
         // 1U1dAjZnNXXozjtiTyFyFo9po8MXLMWV0aiCUBWZerwIYXMMZu
-        var url = "https://api.tumblr.com/v2/tagged?tag=rock&api_key=1U1dAjZnNXXozjtiTyFyFo9po8MXLMWV0aiCUBWZerwIYXMMZu";
+        var url = "https://api.foursquare.com/v2/venues/search?query=rock&near=sao%20paulo&oauth_token=YEP244DHKFHU1MDSL55YL20QYE33E3YYUN5MADDSG25MSYG0&v=20160127";
         var resto_da_url = "?api_key=";
         $http.get(url).then(function successCallback(response) {
             //$scope.buscou = true;
             console.log(response.data);
-            $scope.data = response.data;
+            $scope.data = response.data.response.venues;
+            
+            
+              
+              
+            
+            
         }, function errorCallback(response) {
             alert(JSON.stringify(response));
         });

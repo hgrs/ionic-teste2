@@ -8,9 +8,7 @@
                     <div class="item item-avatar">
                         <img src="https://igcdn-photos-c-a.akamaihd.net/hphotos-ak-xtp1/t51.2885-19/s150x150/11875466_917068388386346_149189516_a.jpg">
                         
-                        <div ng-repeat="d in data">
-                       <div></div>
-                        </div>
+                        
                         
                         <h2>hgrssss</h2>
                         
@@ -28,7 +26,7 @@
                         Open in Spotify
                     </a>
                     
-                    
+                        
                     
                          </div>
 
@@ -95,12 +93,16 @@
             <div class="spacer" style="width: 300px; height: 323px;"></div>
             <ion-list>
                 <label id="caixa" class="item item-input">
-                    <input type="search"  placeholder="Nick" ng-model="busca2">
+                     <div ng-repeat="d in data">
+                         <h2>{{d.name}}</h2>
+                    <input type="search"  value="" ng-model="busca2"> 
+                    
+                    </div> 
                 </label>
             </ion-list>
             <a href="#" id="btnLogar" class="button button-stable button-block item item-icon-left" ng-click="buscaAPI()">Procurar</a>
-            <div ng-repeat="d in data">
-                <h2 id="paragrafo"> {{d.scores}}</h2>
+           
+               
             </div>
                 </form>
             </div>
