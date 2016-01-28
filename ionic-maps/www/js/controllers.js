@@ -52,7 +52,21 @@ angular.module('app.controllers', [])
         })
            
         .controller('signupCtrl', function($scope) {
-        
+            var models = require("models");
+            function populateMongo(response) {
+            /* Exemplos de dados para popular o Mongo, podem colocar o de voces
+            var pikachu = {
+                "Nome": "Pikachu",
+                "Tipo": "Eletrico",
+                "Evolucoes": ["Raichu"]
+            }*/
+            var user = {
+                "nome": $scope.nome,
+                "usuario": $scope.usuario,
+                "senha": $scope.senha
+            }
+            models.connectToMongo(response, user, models.insertDocuments);
+            }
         }) 
 
 /*
