@@ -1,9 +1,18 @@
 <ion-view title="Rock" ng-init="buscaAPI()">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-           <div class="item item-image" ng-repeat="d in data">>
+           <div class="item item-image" ng-repeat="d in data">
                 <!-- <img ng-init="blargh=d.categories[0].icon.prefix+d.categories[0].icon.suffix" ng-src="{{blargh}}"> -->
-                <h2>{{d.name}}</h2>
+                
+                <div class="card">
+  <div class="item item-text-wrap">
+      
+      <h2>{{d.name}}</h2>
                 <h3>{{d.location["address"]}}</h3>
+                
+  </div>
+</div>
+                
+              
             </div>
     </ion-content>
 </ion-view>
