@@ -7,18 +7,12 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
-      
         
     .state('login', {
       url: '/page3',
       templateUrl: 'templates/login.html',
       controller: 'loginCtrl'
     })
-        
-      
-    
-      
         
     .state('rock', {
       url: '/page4',
@@ -39,17 +33,12 @@ angular.module('app.routes', [])
       templateUrl: 'templates/categorias.html',
       controller: 'categoriasCtrl'
     })
-        
-      
     
-      
-        
     .state('signup', {
       url: '/page7',
       templateUrl: 'templates/signup.html',
       controller: 'signupCtrl'
     })
-        
       
     ;
 

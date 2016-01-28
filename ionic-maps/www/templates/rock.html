@@ -1,18 +1,13 @@
 <ion-view title="Rock" ng-init="buscaRock()">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-           <div class="item item-image" ng-repeat="d in data">
-                <!-- <img ng-init="blargh=d.categories[0].icon.prefix+d.categories[0].icon.suffix" ng-src="{{blargh}}"> -->
-                
-                <div class="card">
-  <div class="item item-text-wrap">
-      
-      <h2>{{d.name}}</h2>
+        <div class="list card" ng-repeat="d in data">
+            <div class="item item-avatar">
+                <h2>{{d.name}}</h2>
                 <h3>{{d.location["address"]}}</h3>
-                
-  </div>
-</div>
-                
-              
             </div>
+            <div class="item item-image">
+                <img src="http://www.curtosim.com.br/Conteudo/Hotsite/grd-grooveBAR(0)(1).jpg">
+            </div> 
+        </div>
     </ion-content>
 </ion-view>
