@@ -27,7 +27,11 @@ angular.module('app.routes', [])
     })
         
       
-    
+    .state('pop', {
+      url: '/page5',
+      templateUrl: 'templates/pop.html',
+      controller: 'rockCtrl'
+    })
       
         
     .state('categorias', {
