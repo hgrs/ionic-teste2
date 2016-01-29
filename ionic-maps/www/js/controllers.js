@@ -30,19 +30,17 @@ angular.module('app.controllers', [])
         $scope.buscaPop = function(busca2){
         // Simple GET request example:
         // 1U1dAjZnNXXozjtiTyFyFo9po8MXLMWV0aiCUBWZerwIYXMMZu
-        var url = "https://api.foursquare.com/v2/venues/search?query=pop&near=sao%20paulo&oauth_token=YEP244DHKFHU1MDSL55YL20QYE33E3YYUN5MADDSG25MSYG0&v=20160127";
-        
+        var url = "https://api.foursquare.com/v2/venues/explore?near=sao%20paulo&venuePhotos=1&query=rock&oauth_token=EDOXHFJMXXLBDFEY504TWNGURJTWO5JTTQOONOXTSI5LDY2T&v=20160129";
+        //var url_imagem = "https://api.foursquare.com/v2/venues/explore?near=sao%20paulo&venuePhotos=1&query=rock&oauth_token=EDOXHFJMXXLBDFEY504TWNGURJTWO5JTTQOONOXTSI5LDY2T&v=20160129"
         $http.get(url).then(function successCallback(response) {
             //$scope.buscou = true;
             console.log(response.data);
-            $scope.data = response.data.response.venues;
+            $scope.data = response.data.response.groups.items;
             $scope.png = ".png";
-         //   $scope.imagem = response.data.response.venues.icon['prefix'] + response.data.response.venues.icon.suffix; //  junta prefix e sufix da url - cria link da imagem
-  
+            //$scope.imagem = response.data.response.venues.categories.icon['prefix'] + response.data.response.venues.icon.suffix; //  junta prefix e sufix da url - cria link da imagem
         }, function errorCallback(response) {
             alert(JSON.stringify(response));
         });
-       
         };
         
         })

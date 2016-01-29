@@ -1,13 +1,13 @@
 <ion-view title="Pop" ng-init="buscaPop()">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
            <div class="list card" ng-repeat="d in data">
-                  <div class="item item-avatar">
-                        <h2>{{d.name}}</h2>
-                        <h3>{{d.location["address"]}}</h3>
-                  </div>
-                  <div class="item item-image">
-                        <img src="http://villagealliance.org/media/filer_thumbnails/2012/02/17/pop_pub.jpg__598x399_q85_crop_upscale.jpg">
-                  </div> 
+                <div class="item item-avatar">
+                    <h2>{{d.venue["name"]}}</h2>
+                    <h3>{{d.location["address"]}}</h3>
+                </div>
+                <div class="item item-image">
+                    <img ng-src= "{{d.photos.groups.items["prefix"]}}" + "\/500x500\/" + "{{d.photos.groups.items["suffix"]}}">
+                </div> 
           </div>
     </ion-content>
 </ion-view>

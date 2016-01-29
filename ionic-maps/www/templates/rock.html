@@ -6,7 +6,7 @@
                 <h3>{{d.location["address"]}}</h3>
             </div>
             <div class="item item-image">
-                <img src="http://www.curtosim.com.br/Conteudo/Hotsite/grd-grooveBAR(0)(1).jpg">
+                <img ng-src= "{{d.photos.groups.items["prefix"]}}" + "\/500x500\/" + "{{d.photos.groups.items["suffix"]}}">
             </div> 
         </div>
     </ion-content>
